@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: space-between;
+    background: #253d5c;
+    padding: 10px 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    justify-content: center;
+}
+#navbar li{
+    list-style: none;
+    padding: 0px 20px;
+    position: relative;
+}
+#navbar li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color: #17cf97;
+}
+#navbar li a:hover::after,
+#navbar li a.active::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #17cf97;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+
+}
+#mobile i{
+    color: white;
+    align-items: center;
+}
+#mobile{
+    display: none;
+}
+@media screen and (max-width:769px){
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-decoration: none;
+        list-style: none;
+        justify-content: flex-start;
+        position: fixed;
+        top: 66px;
+        right: -300px;
+        padding: 40px 0 0 10px;
+        text-align: center;
+        gap: 30px;
+        width: 300px;
+        height: 100vh;
+        background: #16293a;
+        box-shadow: 0 40px 60px rgba(0,0,0,0.1);
+        transition: 0.3s ease-in-out;
+    }
+    #navbar.active{
+        right: 0px;
+        transition: 0.3s ease-in-out;
+    }
+    #mobile{
+        display: block;
+
+    }
+    #mobile i{
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+}
